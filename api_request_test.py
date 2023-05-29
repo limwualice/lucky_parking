@@ -12,9 +12,8 @@ client = Socrata("data.lacity.org",
                  username=username,
                  password=password)
 
-# First 2000 results, returned as JSON from API / converted to Python list of
-# dictionaries by sodapy.
-results = client.get("wjz9-h9np", limit=20)
+# results returned as JSON from API / converted to Python list of dictionaries by sodapy.
+results = client.get("wjz9-h9np", limit=20, select="ticket_number, issue_date")
 
 # Convert to pandas DataFrame
 results_df = pd.DataFrame.from_records(results)
