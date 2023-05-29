@@ -3,6 +3,7 @@ config.py
 
 #ignore venv folder
 venv/
+myenv/
 
 #ignore pycache
 __pycache__/
